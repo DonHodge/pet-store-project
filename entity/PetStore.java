@@ -23,7 +23,7 @@ public class PetStore {
 	private Long petStoreId;
 	
 	private String petStoreName;
-	private String address;
+	private String petStoreAddress;
 	private String petStoreCity;
 	private String petStoreState;
 	private String petStoreZip;
@@ -37,5 +37,7 @@ public class PetStore {
 	
 	@OneToMany(mappedBy = "petStore", cascade = CascadeType.ALL,
 			orphanRemoval = true)
+	@EqualsAndHashCode.Exclude
+	@ToString.Exclude
 	private Set<Employee> employees = new HashSet<>();
 }

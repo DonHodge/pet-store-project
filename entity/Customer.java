@@ -18,7 +18,7 @@ import lombok.ToString;
 public class Customer {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long customerId;
+	private Long customerId;
 	
 	private String customerFirstName;
 	private String customerLastName;
